@@ -1,7 +1,42 @@
 import { useState, useEffect } from "react";
-import { Sparkles, ArrowUpRight, ShieldCheck, Zap, Heart } from "lucide-react";
+import { Sparkles, ArrowUpRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import reception from "@/assets/clinic/reception.jpg";
+
+// ─── Custom hand-crafted premium clinic icons ──────────────────────────────
+
+const SterilisedIcon = (props: any) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    {/* Shield backdrop */}
+    <path d="M12 22 C12 22 20 18 20 10 V5 L12 2 L4 5 V10 C4 18 12 22 12 22Z" opacity="0.3" strokeWidth="1.2" />
+    {/* Central Tooth representing clinical cleanliness */}
+    <path d="M12 5.5 C10 5.5 9 6.5 9 8 C9 9.5 9.5 10.5 9.5 11.5 Q9.5 13 8.5 14 Q9.5 14 10.5 13 L12 11.5 L13.5 13 Q14.5 14 15.5 14 Q14.5 13 14.5 11.5 C14.5 10.5 15 9.5 15 8 C15 6.5 14 5.5 12 5.5Z" />
+    {/* Sparkle detailing for absolute clean shine */}
+    <path d="M18 4.5 L18.5 5.5 L19.5 5.5 L18.8 6 L19 7 L18 6.5 L17 7 L17.2 6 L16.5 5.5 L17.5 5.5 Z" fill="currentColor" stroke="none" />
+    {/* Checkmark inside */}
+    <path d="M10 9 L11.5 10.5 L14 7.5" strokeWidth="2.2" />
+  </svg>
+);
+
+const AdvancedTechIcon = (props: any) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    {/* Concentric high-tech laser scan rings */}
+    <circle cx="12" cy="12" r="9" opacity="0.3" strokeWidth="1.2" strokeDasharray="3 3" />
+    {/* Central Tooth */}
+    <path d="M12 6 C10 6 9 7.2 9 9 C9 10.5 9.5 11.5 9.5 12.5 Q9.5 14.5 8.5 15.5 C10 15.5 11.5 14.5 12 13.5 C12.5 14.5 14 15.5 15.5 15.5 C14.5 14.5 14.5 13.5 14.5 12.5 C14.5 11.5 15 10.5 15 9 C15 7.2 14 6 12 6Z" />
+    {/* Lightning bolt integrated vertically */}
+    <path d="M12 4 L10 10.5 H13.5 L11.5 17.5 L16.5 10 H13 L14.5 4" fill="currentColor" fillOpacity="0.15" />
+  </svg>
+);
+
+const BoutiqueCareIcon = (props: any) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    {/* Outer soft heart ring */}
+    <path d="M12 21 C12 21 3 16 3 9.5 C3 5.5 6 3 9.5 3 C11.5 3 12 4.5 12 4.5 C12 4.5 12.5 3 14.5 3 C18 3 21 5.5 21 9.5 C21 16 12 21 12 21Z" strokeWidth="1.5" />
+    {/* Central Tooth nested lovingly inside the heart */}
+    <path d="M12 7 C10.5 7 9.5 8 9.5 9.5 C9.5 10.8 10 11.5 10 12.2 Q10 13.5 9 14.2 Q10 14.2 10.8 13.5 L12 12.2 L13.2 13.5 Q14 14.2 15 14.2 Q14 13.5 14 12.2 C14 11.5 14.5 10.8 14.5 9.5 C14.5 8 13.5 7 12 7Z" fill="currentColor" fillOpacity="0.25" />
+  </svg>
+);
 import operatory1 from "@/assets/clinic/operatory-1.jpg";
 import operatory2 from "@/assets/clinic/operatory-2.jpg";
 import surgery from "@/assets/clinic/surgery-room.jpg";
@@ -119,6 +154,54 @@ export function ClinicTour() {
           
           {/* Main Active Image Display */}
           <div className="relative w-full aspect-[16/10] md:aspect-[21/9] rounded-[2.5rem] bg-white shadow-2xl p-2 md:p-3 border border-[#8E44AD]/40">
+            
+            {/* Animated Glowing Snake Border */}
+            <div className="absolute inset-0 pointer-events-none z-20 overflow-visible">
+              <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="snake-glow-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#4B1248" />
+                    <stop offset="35%" stopColor="#8E44AD" />
+                    <stop offset="70%" stopColor="#0072B5" />
+                    <stop offset="100%" stopColor="#F08080" />
+                  </linearGradient>
+                </defs>
+                
+                {/* Blurry volumetric outer glow snake layer */}
+                <rect
+                  x="0"
+                  y="0"
+                  width="100%"
+                  height="100%"
+                  rx="40"
+                  fill="none"
+                  stroke="url(#snake-glow-gradient)"
+                  strokeWidth="8"
+                  pathLength="100"
+                  strokeDasharray="25 75"
+                  strokeLinecap="round"
+                  className="animate-[snake-flow_8s_linear_infinite]"
+                  style={{ filter: "blur(8px)", opacity: 0.8 }}
+                />
+                
+                {/* Sharp high-contrast overlay snake layer */}
+                <rect
+                  x="0"
+                  y="0"
+                  width="100%"
+                  height="100%"
+                  rx="40"
+                  fill="none"
+                  stroke="url(#snake-glow-gradient)"
+                  strokeWidth="3.5"
+                  pathLength="100"
+                  strokeDasharray="25 75"
+                  strokeLinecap="round"
+                  className="animate-[snake-flow_8s_linear_infinite]"
+                />
+              </svg>
+            </div>
+
             <div className="relative w-full h-full rounded-[2rem] overflow-hidden bg-gray-100">
               <AnimatePresence>
                 <motion.div
@@ -188,34 +271,6 @@ export function ClinicTour() {
           </div>
         </div>
 
-        {/* ── PREMIUM STATS/FEATURES BANNER ── */}
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-20 relative overflow-hidden rounded-[2.5rem] bg-white border border-gray-100 shadow-[0_20px_50px_rgba(75,18,72,0.06)]"
-        >
-          {/* Banner Internal Lighting */}
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-purple-50/80 to-transparent pointer-events-none" />
-          <div className="absolute -bottom-[50px] -left-[50px] w-[200px] h-[200px] bg-pink-100/50 rounded-full blur-[60px] pointer-events-none" />
-
-          <div className="relative p-10 lg:p-14 grid gap-10 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
-            {[
-              { title: "Sterilised", desc: "AERB & KSDC certified protocols across all suites", icon: ShieldCheck, color: "text-blue-500", bg: "bg-blue-50" },
-              { title: "Advanced Tech", desc: "Intra-oral lasers & 3D digital imaging systems", icon: Zap, color: "text-purple-500", bg: "bg-purple-50" },
-              { title: "Boutique Care", desc: "Private consultation zones for each patient", icon: Heart, color: "text-pink-500", bg: "bg-pink-50" },
-            ].map((item) => (
-              <div key={item.title} className="flex flex-col items-center text-center sm:px-6 first:pt-0 first:sm:px-0 last:pb-0 last:sm:px-0 pt-10 sm:pt-0">
-                <div className={`w-14 h-14 rounded-2xl ${item.bg} flex items-center justify-center mb-6`}>
-                  <item.icon className={`w-6 h-6 ${item.color}`} />
-                </div>
-                <h4 className="font-display text-2xl font-bold text-gray-900 mb-3">{item.title}</h4>
-                <p className="text-gray-500 font-medium leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
 
       </div>
       
@@ -226,6 +281,14 @@ export function ClinicTour() {
           20% { opacity: 1; }
           80% { opacity: 1; }
           100% { transform: translateX(200%) skewX(-15deg); opacity: 0; }
+        }
+        @keyframes snake-flow {
+          0% {
+            stroke-dashoffset: 0;
+          }
+          100% {
+            stroke-dashoffset: -100;
+          }
         }
       `}} />
     </section>

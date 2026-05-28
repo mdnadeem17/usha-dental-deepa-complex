@@ -10,11 +10,29 @@ function BookingPage() {
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
-    email: "",
     service: "",
     date: "",
     message: "",
   });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const { fullName, phone, service, date, message } = formData;
+    
+    const text = `Hello Usha Dental Clinic! I would like to book an appointment.
+
+*Details:*
+- *Name:* ${fullName || "Not provided"}
+- *Phone:* ${phone || "Not provided"}
+- *Service:* ${service || "Not selected"}
+- *Preferred Date:* ${date || "Not provided"}
+- *Message:* ${message || "N/A"}`;
+
+    const encodedText = encodeURIComponent(text);
+    const whatsappNumber = "919980609894";
+    
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedText}`, "_blank");
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -56,7 +74,7 @@ function BookingPage() {
 
         {/* Right Side (Form) */}
         <div className="bg-white rounded-[2.5rem] p-10 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.05)] border border-gray-100">
-          <form className="space-y-5">
+          <form className="space-y-5" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
               <input
@@ -79,19 +97,6 @@ function BookingPage() {
                 placeholder="+91 98765 43210"
                 className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-gray-300"
                 value={formData.phone}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="you@example.com"
-                className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-gray-300"
-                value={formData.email}
                 onChange={handleChange}
               />
             </div>
