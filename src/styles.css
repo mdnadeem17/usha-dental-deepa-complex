@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
@@ -31,53 +32,53 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-display: "Fraunces", Georgia, serif;
+  --font-display: "Outfit", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.875rem;
-  /* Palette derived from Usha Dental Logo: Deep Purple, Blue, Coral */
-  --background: oklch(0.99 0.01 335);
-  --foreground: oklch(0.25 0.05 335);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.25 0.05 335);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0.05 335);
-  --primary: oklch(0.28 0.08 335); /* Deep Purple #4B1C3F */
-  --primary-foreground: oklch(0.99 0.01 335);
-  --primary-glow: oklch(0.48 0.16 248); /* Blue #0072B5 */
-  --secondary: oklch(0.95 0.05 248); /* Light Blue tint */
-  --secondary-foreground: oklch(0.28 0.08 335);
-  --muted: oklch(0.96 0.02 335);
-  --muted-foreground: oklch(0.45 0.05 335);
-  --accent: oklch(0.68 0.14 25); /* Coral Accent #F08080 */
-  --accent-foreground: oklch(0.99 0.01 25);
-  --destructive: oklch(0.6 0.22 25);
-  --destructive-foreground: oklch(0.99 0.01 95);
-  --border: oklch(0.92 0.03 335);
-  --input: oklch(0.94 0.03 335);
-  --ring: oklch(0.48 0.16 248);
+  /* Premium Dental Clinic Palette - Plums & Purples Theme */
+  --background: hsl(210 40% 98%); /* Clinical White */
+  --foreground: hsl(222 47% 11%); /* Slate Navy */
+  --card: hsl(0 0% 100%); /* Pure White */
+  --card-foreground: hsl(222 47% 11%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(222 47% 11%);
+  --primary: hsl(282 44% 47%); /* Bright Violet (#8E44AD) */
+  --primary-foreground: hsl(0 0% 100%);
+  --primary-glow: hsl(303 61% 18%); /* Dark Plum (#4B1248) */
+  --secondary: hsl(282 44% 96%); /* Light Violet Background */
+  --secondary-foreground: hsl(303 61% 18%); /* Dark Plum */
+  --muted: hsl(282 15% 96%);
+  --muted-foreground: hsl(282 20% 40%);
+  --accent: hsl(303 61% 18%); /* Dark Plum (#4B1248) */
+  --accent-foreground: hsl(0 0% 100%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(282 20% 90%);
+  --input: hsl(282 20% 90%);
+  --ring: hsl(282 44% 47%);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.28 0.08 335) 0%, oklch(0.48 0.16 248) 100%);
-  --gradient-soft: linear-gradient(180deg, oklch(0.99 0.01 335) 0%, oklch(0.95 0.05 248) 100%);
-  --shadow-elegant: 0 20px 50px -20px color-mix(in oklab, oklch(0.28 0.08 335) 35%, transparent);
-  --shadow-card: 0 4px 24px -8px color-mix(in oklab, oklch(0.28 0.08 335) 12%, transparent);
+  --gradient-hero: linear-gradient(135deg, hsl(303 61% 18%) 0%, hsl(282 44% 47%) 100%);
+  --gradient-soft: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(282 44% 96%) 100%);
+  --shadow-elegant: 0 20px 50px -20px color-mix(in srgb, hsl(303 61% 18%) 25%, hsl(282 44% 47%) 25%);
+  --shadow-card: 0 4px 24px -8px color-mix(in srgb, hsl(282 44% 47%) 15%, transparent);
 
   /* Lighting Effects */
-  --light-beam: radial-gradient(circle at 50% 50%, oklch(0.48 0.16 248 / 0.15) 0%, transparent 70%);
-  --ambient-glow: radial-gradient(circle at 0% 0%, oklch(0.68 0.14 25 / 0.05) 0%, transparent 50%);
+  --light-beam: radial-gradient(circle at 50% 50%, color-mix(in srgb, hsl(303 61% 18%) 50%, hsl(282 44% 47%) 50%) 15%, transparent 70%);
+  --ambient-glow: radial-gradient(circle at 0% 0%, hsl(282 44% 47% / 0.05) 0%, transparent 50%);
 }
 
 @layer utilities {
   .text-glow {
-    text-shadow: 0 0 20px oklch(var(--primary) / 0.3);
+    text-shadow: 0 0 20px color-mix(in srgb, var(--primary) 30%, transparent);
   }
   
   .glass-card {
-    background: color-mix(in oklab, var(--card) 80%, transparent);
+    background: color-mix(in srgb, var(--card) 80%, transparent);
     backdrop-filter: blur(12px);
-    border: 1px solid color-mix(in oklab, var(--border) 50%, transparent);
+    border: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
   }
 
   .lighting-bg {
@@ -92,7 +93,7 @@
     left: -10%;
     width: 40%;
     height: 40%;
-    background: radial-gradient(circle, oklch(0.48 0.16 248 / 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, hsl(303 61% 18% / 0.08) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
   }
@@ -104,7 +105,7 @@
     right: -10%;
     width: 50%;
     height: 50%;
-    background: radial-gradient(circle, oklch(0.68 0.14 25 / 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, hsl(282 44% 47% / 0.06) 0%, transparent 70%);
     pointer-events: none;
     z-index: 0;
   }

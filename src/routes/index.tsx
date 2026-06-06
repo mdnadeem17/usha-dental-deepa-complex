@@ -8,12 +8,23 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence, useScroll, useTransform, useSpring, useMotionValue } from "motion/react";
 import receptionImg from "@/assets/clinic/reception.jpg";
-import heroImg from "@/assets/clinic-hero-new.jpg";
+import heroImg from "@/assets/hero-dentist.jpg";
 import doctorImg from "@/assets/doctor.jpg";
 import logoImg from "@/assets/clinic/logo.png";
 import toothImg from "@/assets/tooth-3d.png";
+import mythriImg from "@/assets/reviews/mythri.png";
+import anupamaImg from "@/assets/reviews/anupama.png";
+import karthikImg from "@/assets/reviews/karthik.png";
+import bharathImg from "@/assets/reviews/bharath.png";
+import aryanImg from "@/assets/reviews/aryan.png";
+import shiraImg from "@/assets/reviews/shira.png";
+import royImg from "@/assets/reviews/roy.png";
+import rakshithaImg from "@/assets/reviews/rakshitha.png";
+import janakiramImg from "@/assets/reviews/janakiram.png";
+import prathapImg from "@/assets/reviews/prathap.png";
+import vishalImg from "@/assets/reviews/vishal.png";
 import { ClinicTour } from "@/components/ClinicTour";
-import { ClinicVideoIntro } from "@/components/ClinicVideoIntro";
+
 
 // ─── Custom hand-crafted dental icons (not generic Lucide icons) ─────────────
 
@@ -302,46 +313,92 @@ const expertise = [
 
 const reviews = [
   {
-    name: "Vikram Sharma",
-    role: "Local Guide",
+    name: "Mythri S",
+    role: "9 reviews",
     rating: 5,
-    text: "Dr. Prashanth removed my wisdom tooth and I genuinely felt nothing. I was so nervous before but he kept me calm the whole time. Very clean clinic too.",
-    date: "1 month ago"
+    text: <>My mom had a dental implant done by Dr. Prashanth & Dr. Suma. My mom was initially very scared to get the dental implant. From the very first consultation, the doctor explained everything clearly and made us feel comfortable and confident about the procedure. The implantation was done smoothly and professionally. We are completely satisfied from the result. Doctor is highly skilled, patient, and truly cares about their patients’ well-being and I would highly recommend Usha dental clinic to anyone looking for a reliable and experienced dental professional.</>,
+    date: "3 months ago",
+    image: mythriImg
   },
   {
-    name: "Priyanka N.",
-    role: "Verified Patient",
+    name: "ANUPAMA ms",
+    role: "Local Guide · 24 reviews · 12 photos",
     rating: 5,
-    text: "I've been to a lot of dentists and this one actually explains what's happening before doing anything. That alone makes it a 5-star clinic for me.",
-    date: "2 weeks ago"
+    text: <>I have androgenic alopecia since many years. Since being diagnised I’ve undergone many hair treatments and used topical applications, but didnt find any solution in other places. After consulting with Dr Prashanth on his suggestion i started GFC treatment for my hair. After starting my treatment at this clinic, my hair fall has reduced drastically, new hair growth has started, and the thickness of my strands has noticeably improved. The results are truly visible and I feel so much more confident now. I’d definitely recommend this to anyone struggling with hair issues — this is the best clinic for any hair problems like thinning or hair loss or hair fall. Thanks Dr Prashanth and Team.</>,
+    date: "7 months ago",
+    image: anupamaImg
   },
   {
-    name: "Arjun Reddy",
-    role: "Verified Patient",
+    name: "Karthik Ashok",
+    role: "4 reviews · 2 photos",
     rating: 5,
-    text: "Root canal done painlessly. I was expecting the worst but walked out fine. Doctor is patient and doesn't rush you.",
-    date: "3 months ago"
+    text: <>“I recently underwent a GFC skin treatment and the results have been truly impressive. My skin feels firmer, smoother, and has a visible glow. The procedure was comfortable and completely safe, with minimal downtime. Within a few sessions, I noticed a significant reduction in fine lines and improved overall skin texture. Highly recommended for anyone looking to rejuvenate their skin naturally.”</>,
+    date: "8 months ago",
+    image: karthikImg
   },
   {
-    name: "Sneha Kapur",
-    role: "Patient",
+    name: "bharath s",
+    role: "Local Guide · 22 reviews",
     rating: 5,
-    text: "Got my teeth whitened here and the results were genuinely stunning. They matched the shade to my face which I didn't expect!",
-    date: "5 days ago"
+    text: <>Dr. Vinutha and Dr. Prashanth performed filling and scaling perfectly. I recommend folks to visit without any 2nd thought.</>,
+    date: "7 months ago",
+    image: bharathImg
   },
   {
-    name: "Rohan Das",
-    role: "Local Guide",
+    name: "Aryan Ashwini",
+    role: "4 reviews · 1 photo",
     rating: 5,
-    text: "The clinic is calming, not clinical. You know what I mean? It doesn't feel sterile and scary — it feels like someone thought about your comfort.",
-    date: "1 month ago"
+    text: <>Excellent service by Doctors here. I would suggest if you have pain phobia like me. Firstly doctors are very friendly and they first comforted me. Then started the procedure. I use to fear for pain. They helped me to relax and explained me. Now after this i don't have fear any more. My tooth 🦷was extracted and i didn't even feel it. Next day was as usual like all regular days, I didn't feel the pain numbness. Without and pain killer or antibiotics, I'm very happy. Thank you Dr. Prashanth and Dr. Suma 🙏</>,
+    date: "3 years ago",
+    image: aryanImg
   },
   {
-    name: "Meera Iyer",
-    role: "Verified Patient",
+    name: "Shira Horesh",
+    role: "5 reviews · 1 photo",
     rating: 5,
-    text: "Been coming here for over a year now. Dr. Prashanth remembers your history, recommends the right things, and never oversells. Rare to find.",
-    date: "2 months ago"
+    text: <>I had a very good experience. The doctor is highly professional and also very caring. He explains everything patiently and works gently. I warmly recommend!</>,
+    date: "a year ago",
+    image: shiraImg
+  },
+  {
+    name: "roy dayan",
+    role: "10 reviews · 5 photos",
+    rating: 5,
+    text: <>Dr Prashanth is a real pro. I had a complex issue for 5 years and it took him 10 minutes to fix. Keep up the good work, Thank you Doctor!</>,
+    date: "3 years ago",
+    image: royImg
+  },
+  {
+    name: "Rakshitha Ravikumar",
+    role: "7 reviews · 1 photo",
+    rating: 5,
+    text: <>Dr. Prashanth is a well experienced doctor. I am very happy with the treatment and satisfied. Would suggest my acquaintance to visit his clinic for any dental treatment.</>,
+    date: "4 years ago",
+    image: rakshithaImg
+  },
+  {
+    name: "Janakiram RN",
+    role: "Local Guide · 23 reviews · 46 photos",
+    rating: 5,
+    text: <>Dr prashanth is good and well experienced I went for filling done it in 100% perfection and price also moderate, clinic also got all modern facility like X ray etc . All measures taken for covid so it's safe clinic .</>,
+    date: "5 years ago",
+    image: janakiramImg
+  },
+  {
+    name: "Prathap M E",
+    role: "4 reviews",
+    rating: 5,
+    text: <>Dr.Prashanth is a expert doctor. I went for wisdom teeth removal. He removed teeth & gave me good advise how to recover from it . He has a sound knowledge</>,
+    date: "7 years ago",
+    image: prathapImg
+  },
+  {
+    name: "Vishal Gowda",
+    role: "4 reviews",
+    rating: 5,
+    text: <>Extremely Happy on the treatment given by Dr Prashanth sir at affordable price, on my personal experience, I strongly recommend ppl to visit here for dental care....</>,
+    date: "6 years ago",
+    image: vishalImg
   }
 ];
 
@@ -392,14 +449,14 @@ function Index() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveReview((prev) => (prev + 1) % reviews.length);
-    }, 3000);
+    }, 8000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="min-h-screen bg-background font-sans text-foreground selection:bg-primary/20 selection:text-primary">
       {/* NAV */}
-      <motion.header 
+      <motion.header
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         className="sticky top-0 z-50 bg-white/60 backdrop-blur-2xl border-b border-white/50 shadow-[0_15px_40px_-10px_rgba(142,68,173,0.15)] group overflow-hidden"
@@ -407,57 +464,57 @@ function Index() {
       >
         {/* Animated 3D Glass Sweeping Light */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-[1500ms] ease-in-out pointer-events-none" />
-        
+
         {/* Volumetric ambient glow inside the navbar */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[150px] bg-[#8E44AD]/15 blur-[60px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-        
+
         {/* Animated 3D edge light at the bottom */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-full h-[2px] bg-gradient-to-r from-transparent via-[#8E44AD]/40 to-transparent transition-all duration-[800ms] ease-out pointer-events-none" />
 
         <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <a href="#top" className="flex items-center gap-2 group/logo relative">
-            <motion.div 
+          <a href="#top" className="flex items-center gap-3 group/logo relative">
+            <motion.div
               whileHover={{ rotate: 10, scale: 1.1, z: 20 }}
               transition={{ type: "spring", stiffness: 200 }}
               className="relative"
               style={{ transformStyle: "preserve-3d" }}
             >
               <div className="absolute inset-0 bg-[#8E44AD]/20 blur-md rounded-full scale-75 group-hover/logo:scale-110 transition-transform duration-500" />
-              <img 
-                src={logoImg} 
-                alt="Usha Dental Logo" 
-                className="h-[44px] w-[44px] object-contain relative z-10 drop-shadow-md" 
+              <img
+                src={logoImg}
+                alt="Usha Dental Logo"
+                className="h-[68px] w-[68px] object-contain relative z-10 drop-shadow-md"
               />
             </motion.div>
-            <div className="leading-tight">
-              <div className="font-display text-[17.5px] font-semibold group-hover/logo:text-[#8E44AD] transition-colors">Usha Dental</div>
-              <div className="text-[12px] uppercase tracking-widest text-[#6B7280]">Clinic & Implant Centre</div>
+            <div className="leading-tight flex items-baseline gap-2">
+              <div className="font-display text-[18px] sm:text-[22px] font-extrabold group-hover/logo:text-[#8E44AD] transition-colors whitespace-nowrap">Usha Dental</div>
+              <div className="text-[12px] sm:text-[15px] font-black uppercase tracking-widest text-[#0B132B] whitespace-nowrap">Clinic & Implant Centre</div>
             </div>
           </a>
-          
+
           {/* Desktop Nav Links */}
           <div className="hidden items-center gap-10 text-sm font-medium md:flex">
             {["About", "Meet the Doctor", "Clinic", "Services", "Reviews", "Contact"].map((item) => (
-              <a 
-                key={item} 
-                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} 
+              <a
+                key={item}
+                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
                 className="relative text-[#6B7280] transition-colors hover:text-[#0B132B] group/link"
               >
                 {item}
-                <motion.span 
-                  className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-[2px] w-0 bg-[#8E44AD] rounded-full transition-all duration-300 group-hover/link:w-full shadow-[0_0_8px_rgba(142,68,173,0.5)]" 
+                <motion.span
+                  className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-[2px] w-0 bg-[#8E44AD] rounded-full transition-all duration-300 group-hover/link:w-full shadow-[0_0_8px_rgba(142,68,173,0.5)]"
                 />
               </a>
             ))}
-            <motion.a 
+            <motion.a
               whileHover={{ scale: 1.05, y: -2, boxShadow: "0 10px 25px -5px rgba(142,68,173,0.4)" }}
               whileTap={{ scale: 0.95 }}
-              href="/booking" 
+              href="/booking"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#4B1248] to-[#6A2C70] px-5 py-2.5 text-sm font-medium text-white shadow-[0_8px_16px_rgba(75,18,72,0.2)] transition-all duration-300 relative overflow-hidden"
             >
               {/* Button inner shine */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-700" />
-              <Phone className="h-4 w-4 relative z-10" /> 
+              <Phone className="h-4 w-4 relative z-10" />
               <span className="relative z-10">Book Now</span>
             </motion.a>
           </div>
@@ -495,16 +552,16 @@ function Index() {
             >
               <div className="flex flex-col gap-4">
                 {["About", "Meet the Doctor", "Clinic", "Services", "Reviews", "Contact"].map((item) => (
-                  <a 
-                    key={item} 
-                    href={`#${item.toLowerCase().replace(/\s+/g, '-')}`} 
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
                     onClick={() => setMobileMenuOpen(false)}
                     className="text-[16px] font-semibold text-[#0B132B] py-2.5 border-b border-gray-100 last:border-0 hover:text-[#8E44AD] transition-colors"
                   >
                     {item}
                   </a>
                 ))}
-                <a 
+                <a
                   href="/booking"
                   onClick={() => setMobileMenuOpen(false)}
                   className="mt-2 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#4B1248] to-[#6A2C70] px-6 py-3.5 text-base font-semibold text-white shadow-lg"
@@ -519,7 +576,7 @@ function Index() {
       </motion.header>
 
       <section id="top" className="relative overflow-hidden bg-[#F7F4FB] min-h-screen flex items-center pt-10 font-sans" style={{ perspective: "1200px" }}>
-        
+
         {/* Exact Background Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
 
@@ -530,7 +587,7 @@ function Index() {
           <div className="absolute inset-0 pointer-events-none overflow-hidden flex items-center justify-center" style={{ perspective: "1000px" }}>
             {/* Soft Ambient Orbs */}
             <motion.div
-              animate={{ 
+              animate={{
                 z: [-50, 50, -50],
                 x: [-30, 30, -30],
                 y: [-20, 20, -20]
@@ -540,7 +597,7 @@ function Index() {
               style={{ background: "radial-gradient(circle, #D8CDE8, transparent)" }}
             />
             <motion.div
-              animate={{ 
+              animate={{
                 z: [50, -50, 50],
                 x: [30, -30, 30],
                 y: [20, -20, 20]
@@ -605,15 +662,15 @@ function Index() {
           {/* ── FULL BACKGROUND FLOATING DOTS (3D GRID EFFECT) ── */}
           <div className="absolute inset-0 pointer-events-none flex items-center justify-center overflow-hidden" style={{ perspective: "1000px" }}>
             <motion.div
-              animate={{ 
+              animate={{
                 rotateX: [55, 60, 55],
                 rotateZ: [-2, 2, -2],
                 y: [0, -30, 0]
               }}
-              transition={{ 
-                duration: 12, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
+              transition={{
+                duration: 12,
+                repeat: Infinity,
+                ease: "easeInOut"
               }}
               className="absolute pointer-events-none"
               style={{
@@ -632,7 +689,7 @@ function Index() {
           {/* ── CENTRALIZED CIRCLE GROUP ── */}
           {/* Positioned slightly offset from the right to bring the left arc into the center of the screen */}
           <div className="absolute top-1/2 right-[5%] lg:right-[16%] w-0 h-0 flex items-center justify-center pointer-events-none opacity-25 lg:opacity-100">
-            
+
             {/* ── CONCENTRIC ANIMATED OUTLINES ── */}
             {[...Array(5)].map((_, i) => (
               <motion.div
@@ -686,8 +743,8 @@ function Index() {
                   skewX: "-15deg",
                 }}
               />
-              <img 
-                src={heroImg} 
+              <img
+                src={heroImg}
                 alt="Clinic Hero"
                 className="w-full h-full object-cover"
                 style={{ objectPosition: "72% center" }}
@@ -744,7 +801,7 @@ function Index() {
               </motion.div>
 
               {/* Heading — staggered word reveal */}
-              <div className="text-[2.8rem] sm:text-[3.5rem] lg:text-[88px] font-[900] leading-[0.9] tracking-[-2px] lg:tracking-[-4px] text-[#0B132B] max-w-[650px]">
+              <div className="text-[2.5rem] sm:text-[3.2rem] lg:text-[72px] font-[900] leading-[1.05] tracking-[-1px] lg:tracking-[-2px] text-[#0B132B] max-w-[700px]">
                 <motion.div
                   initial={{ opacity: 0, y: 60, rotateX: -20 }}
                   animate={{ opacity: 1, y: 0, rotateX: 0 }}
@@ -757,9 +814,9 @@ function Index() {
                   initial={{ opacity: 0, x: -60, filter: "blur(12px)" }}
                   animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                   transition={{ delay: 0.5, duration: 0.9, ease: "easeOut" }}
-                  className="block bg-gradient-to-r from-[#4B1248] to-[#8E44AD] bg-clip-text text-transparent"
+                  className="block bg-gradient-to-r from-[#4B1248] to-[#8E44AD] bg-clip-text text-transparent pb-4 -mb-4"
                 >
-                  Multi-speciality
+                  Clinic & Implant
                 </motion.span>
                 <motion.span
                   initial={{ opacity: 0, y: 40 }}
@@ -767,7 +824,7 @@ function Index() {
                   transition={{ delay: 0.7, duration: 0.7 }}
                   className="block"
                 >
-                  Clinic
+                  Centre
                 </motion.span>
               </div>
 
@@ -803,28 +860,28 @@ function Index() {
               {/* Stats Section - Live Animated */}
               <div className="flex overflow-x-auto hide-scrollbar items-center gap-4 lg:gap-8 mt-10 lg:mt-16 pt-6 lg:pt-8 w-full border-t border-[rgba(75,18,72,0.08)] perspective-[1000px] pb-2">
                 {/* 15+ Years */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, rotateX: 20, y: 30 }}
                   animate={{ opacity: 1, rotateX: 0, y: 0 }}
                   transition={{ delay: 0.6, type: "spring", stiffness: 100 }}
                   whileHover={{ y: -8, scale: 1.05, rotateX: 10, rotateY: -10 }}
-                  className="group relative flex items-center gap-4 bg-white/60 backdrop-blur-xl px-6 py-4 rounded-3xl border border-white/80 shadow-[0_10px_30px_-5px_rgba(59,130,246,0.15)] transform-style-3d overflow-hidden cursor-default"
+                  className="group relative flex items-center gap-4 bg-white/60 backdrop-blur-xl px-6 py-4 rounded-3xl border border-white/80 shadow-[0_10px_30px_-5px_rgba(142,68,173,0.15)] transform-style-3d overflow-hidden cursor-default"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/80 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-[1200ms] pointer-events-none" />
                   <div className="relative flex items-center justify-center">
-                    <div className="absolute inset-0 rounded-full bg-blue-400/30 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <motion.div animate={{ rotateZ: [0, 5, -5, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 border border-blue-100 relative z-10 group-hover:bg-white group-hover:shadow-lg group-hover:shadow-blue-500/20 transition-all">
+                    <div className="absolute inset-0 rounded-full bg-[#8E44AD]/30 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <motion.div animate={{ rotateZ: [0, 5, -5, 0] }} transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} className="w-14 h-14 rounded-full bg-[#8E44AD]/5 flex items-center justify-center text-[#8E44AD] border border-[#8E44AD]/15 relative z-10 group-hover:bg-white group-hover:shadow-lg group-hover:shadow-[#8E44AD]/20 transition-all">
                       <ShieldCheck className="w-6 h-6" />
                     </motion.div>
                   </div>
                   <div>
                     <h3 className="text-[2rem] font-black text-[#0B132B] leading-none tracking-tight drop-shadow-sm">15+</h3>
-                    <p className="text-[#6B7280] uppercase tracking-widest font-bold text-[11px] mt-1.5 group-hover:text-blue-600 transition-colors">Years</p>
+                    <p className="text-[#6B7280] uppercase tracking-widest font-bold text-[11px] mt-1.5 group-hover:text-[#8E44AD] transition-colors">Years</p>
                   </div>
                 </motion.div>
 
                 {/* 5K+ Patients */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, rotateX: 20, y: 30 }}
                   animate={{ opacity: 1, rotateX: 0, y: 0 }}
                   transition={{ delay: 0.8, type: "spring", stiffness: 100 }}
@@ -845,7 +902,7 @@ function Index() {
                 </motion.div>
 
                 {/* 99% Happy */}
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, rotateX: 20, y: 30 }}
                   animate={{ opacity: 1, rotateX: 0, y: 0 }}
                   transition={{ delay: 1.0, type: "spring", stiffness: 100 }}
@@ -903,9 +960,9 @@ function Index() {
 
         <div className="relative mx-auto max-w-[1400px] px-6">
           <div className="grid items-center gap-16 lg:grid-cols-12">
-            
+
             {/* LEFT: TEXT & HEADINGS */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -60, filter: "blur(8px)" }}
               whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
               viewport={{ once: true, margin: "-100px" }}
@@ -924,9 +981,9 @@ function Index() {
                 </motion.div>
                 <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#8E44AD]">Our Ethos</span>
               </motion.div>
-              
+
               <h2 className="font-display text-5xl font-bold leading-[1.1] md:text-6xl lg:text-[72px] tracking-tight text-[#0B132B]">
-                Precision care,<br/>
+                Precision care,<br />
                 <span className="relative inline-block mt-2">
                   <span className="relative z-10 bg-gradient-to-r from-[#4B1248] via-[#8E44AD] to-[#4B1248] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
                     personal touch.
@@ -935,11 +992,11 @@ function Index() {
                   <div className="absolute bottom-[10%] left-0 w-full h-[30%] bg-[#8E44AD]/20 blur-md -z-10 rounded-full" />
                 </span>
               </h2>
-              
+
               <p className="mt-8 text-lg md:text-xl leading-relaxed text-[#6B7280] font-medium max-w-[500px]">
                 Usha Dental Clinic and Implant Centre stands as a beacon of advanced dentistry in Nagarbhavi, Bangalore. We believe in <span className="text-[#0B132B] font-semibold">"Biological Dentistry"</span> — preserving as much natural tooth structure as possible.
               </p>
-              
+
               <p className="mt-4 text-lg md:text-xl leading-relaxed text-[#6B7280] font-medium max-w-[500px]">
                 Under the leadership of Dr. Prashanth L, our clinic has spent nearly two decades refining aesthetic and functional restoration techniques.
               </p>
@@ -949,36 +1006,36 @@ function Index() {
             <div className="lg:col-span-7 relative z-10">
               <div className="grid gap-6 sm:grid-cols-3" style={{ perspective: "1500px" }}>
                 {[
-                  { 
-                    t: "Gentle Care", 
-                    s: "Comfort-first approach to ensure anxiety-free visits.", 
+                  {
+                    t: "Gentle Care",
+                    s: "Comfort-first approach to ensure anxiety-free visits.",
                     i: GentleCareIcon,
                     bg: "bg-[#8E44AD]/6 border border-[#8E44AD]/15 text-[#8E44AD] shadow-[0_8px_20px_rgba(142,68,173,0.05)] hover:bg-[#8E44AD]/10",
                     pingGlow: "bg-[#8E44AD]/20"
                   },
-                  { 
-                    t: "Modern Tech", 
-                    s: "Latest oral diagnostics & 3D imaging tools.", 
+                  {
+                    t: "Modern Tech",
+                    s: "Latest oral diagnostics & 3D imaging tools.",
                     i: ModernTechIcon,
                     bg: "bg-[#0072B5]/6 border border-[#0072B5]/15 text-[#0072B5] shadow-[0_8px_20px_rgba(0,114,181,0.05)] hover:bg-[#0072B5]/10",
                     pingGlow: "bg-[#0072B5]/20"
                   },
-                  { 
-                    t: "Ethical Art", 
-                    s: "Evidence-based, honest treatment plans.", 
+                  {
+                    t: "Ethical Art",
+                    s: "Evidence-based, honest treatment plans.",
                     i: EthicalArtIcon,
                     bg: "bg-[#F08080]/6 border border-[#F08080]/15 text-[#F08080] shadow-[0_8px_20px_rgba(240,128,128,0.05)] hover:bg-[#F08080]/10",
                     pingGlow: "bg-[#F08080]/20"
                   },
                 ].map((item, idx) => (
-                  <motion.div 
-                    key={item.t} 
+                  <motion.div
+                    key={item.t}
                     initial={{ opacity: 0, y: 70, rotateX: 25, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, rotateX: 0, filter: "blur(0px)" }}
-                    whileHover={{ 
-                      rotateX: 14, 
-                      rotateY: -14, 
-                      z: 60, 
+                    whileHover={{
+                      rotateX: 14,
+                      rotateY: -14,
+                      z: 60,
                       scale: 1.05,
                       boxShadow: "0 40px 80px -15px rgba(142,68,173,0.2)"
                     }}
@@ -986,14 +1043,14 @@ function Index() {
                     transition={{ duration: 0.8, delay: idx * 0.2, type: "spring", stiffness: 90 }}
                     className="relative overflow-hidden rounded-[2rem] p-8 bg-white/70 backdrop-blur-2xl border border-white/80 group cursor-pointer"
                     style={{ transformStyle: "preserve-3d", boxShadow: "0 10px 30px -10px rgba(0,0,0,0.05)" }}
-                  >           
+                  >
                     {/* Animated radial glow on hover */}
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" style={{ background: "radial-gradient(circle at 50% 0%, rgba(142,68,173,0.10) 0%, transparent 70%)" }} />
                     {/* Glowing core behind the icon */}
                     <div className="absolute inset-0 bg-gradient-to-br from-[#8E44AD]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    
+
                     {/* Floating 3D Icon */}
-                    <motion.div 
+                    <motion.div
                       className={`relative z-10 size-14 mb-8 rounded-[1.25rem] flex items-center justify-center transition-all duration-300 ${item.bg}`}
                       whileHover={{ z: 50, rotateZ: 10, scale: 1.1 }}
                       transition={{ type: "spring", stiffness: 200 }}
@@ -1001,10 +1058,10 @@ function Index() {
                       <div className={`absolute inset-0 rounded-[1.25rem] ${item.pingGlow} animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                       <item.i className="h-6 w-6 relative z-10" />
                     </motion.div>
-                    
+
                     {/* Floating Text */}
-                    <motion.div 
-                      whileHover={{ z: 30 }} 
+                    <motion.div
+                      whileHover={{ z: 30 }}
                       className="relative z-10"
                       style={{ transformStyle: "preserve-3d" }}
                     >
@@ -1026,19 +1083,19 @@ function Index() {
       {/* MEET THE DOCTOR */}
       <section id="meet-the-doctor" className="mx-auto max-w-7xl px-6 py-16 lg:py-24">
         <div className="grid items-center gap-16 lg:grid-cols-2">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
             className="group relative"
           >
             <div className="absolute -inset-4 rounded-[3.5rem] bg-primary/10 blur-3xl transition-opacity duration-500 group-hover:bg-primary/20" />
-            
+
             {/* Pro Effect Framing */}
             <div className="relative aspect-[4/5] p-2.5">
               {/* Outer thin line */}
               <div className="absolute inset-0 border border-primary/30 rounded-[3.5rem] transition-colors duration-500 group-hover:border-primary/50" />
-              
+
               {/* Double corners (Thick brackets) */}
               <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-0 left-0 w-16 h-16 border-t-[3px] border-l-[3px] border-primary rounded-tl-[3.5rem] transition-all duration-500 group-hover:w-20 group-hover:h-20" />
@@ -1056,7 +1113,7 @@ function Index() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent pointer-events-none" />
                 {/* Subtle sweeping light beam */}
-                <motion.div 
+                <motion.div
                   animate={{
                     x: ["-200%", "200%"]
                   }}
@@ -1071,16 +1128,16 @@ function Index() {
                 />
               </div>
             </div>
-            <motion.div 
+            <motion.div
               whileHover={{ rotate: -5, scale: 1.05 }}
               className="absolute -right-4 -top-4 flex flex-col items-center rounded-2xl bg-primary px-4 py-3 text-primary-foreground shadow-2xl ring-2 ring-background"
             >
-              <div className="font-display text-2xl font-bold leading-none">18+</div>
-              <div className="mt-0.5 text-[8px] font-bold uppercase tracking-[0.1em] opacity-80">Years Exp</div>
+              <div className="font-display text-2xl font-bold leading-none">19+</div>
+              <div className="mt-0.5 text-[8px] font-bold uppercase tracking-[0.1em] opacity-80">Years Dr. Experience</div>
             </motion.div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
@@ -1090,7 +1147,7 @@ function Index() {
               <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-primary">Chief Surgeon</span>
             </div>
             <h2 className="mt-6 font-display text-4xl font-semibold leading-tight text-glow md:text-5xl">Dr. Prashanth L</h2>
-            <p className="mt-4 text-base font-bold italic tracking-wide text-muted-foreground">MDS (Oral & Maxillofacial Surgery) · BDS</p>
+            <p className="mt-4 text-base font-bold italic tracking-wide text-muted-foreground">BDS · MDS (Oral & Maxillofacial Surgery)</p>
 
             <div className="mt-10 space-y-8 text-lg leading-relaxed text-muted-foreground lg:text-xl">
               <p>
@@ -1107,8 +1164,8 @@ function Index() {
                 { icon: Award, text: "Certified Oral & Maxillofacial Surgeon" },
                 { icon: ShieldCheck, text: "Member - KSDC (Karnataka State Dental Council)" },
               ].map((item, i) => (
-                <motion.div 
-                  key={i} 
+                <motion.div
+                  key={i}
                   initial={{ opacity: 0, x: 10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 * i }}
@@ -1125,15 +1182,14 @@ function Index() {
         </div>
       </section>
 
-      {/* CLINIC INTRO VIDEO */}
-      <ClinicVideoIntro />
+
 
       {/* RECEPTION & TOUR */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        id="clinic-tour" 
+        id="clinic-tour"
         className="pb-16 lg:pb-24"
       >
         <ClinicTour />
@@ -1164,7 +1220,7 @@ function Index() {
           />
         </div>
         <div className="mx-auto max-w-7xl px-6 relative z-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 50, filter: "blur(8px)" }}
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             viewport={{ once: true, margin: "-100px" }}
@@ -1179,7 +1235,7 @@ function Index() {
               className="text-[10px] font-bold uppercase text-primary"
             >Clinical Services</motion.span>
             <h2 className="font-display text-4xl font-semibold leading-[1.1] md:text-5xl lg:text-6xl">
-              Advanced dental care,<br/>under one roof.
+              Advanced dental care,<br />under one roof.
             </h2>
             <p className="max-w-2xl text-muted-foreground mt-2 text-lg">
               Expert solutions for everything from root canals to full-mouth rehabilitation, crafted for long-term health and aesthetics.
@@ -1188,8 +1244,8 @@ function Index() {
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map(({ icon: Icon, title, desc }, idx) => (
-              <motion.article 
-                key={title} 
+              <motion.article
+                key={title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
@@ -1198,7 +1254,7 @@ function Index() {
               >
                 {/* Background glow on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" style={{ background: "radial-gradient(120% 120% at 50% 0%, oklch(0.28 0.08 335 / 0.08) 0%, transparent 70%)" }} />
-                
+
                 {/* Scan sheen */}
                 <motion.div
                   className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -1206,17 +1262,17 @@ function Index() {
                   animate={{ x: ["-100%", "200%"] }}
                   transition={{ duration: 2.5, ease: "easeInOut", repeat: Infinity, repeatDelay: 1 }}
                 />
-                
+
                 {/* Bottom accent line */}
                 <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-gradient-to-r from-primary to-primary-glow transition-all duration-500 ease-out group-hover:w-full shadow-[0_0_12px_oklch(0.28_0.08_335_/_0.6)]" />
-                
+
                 <div className="mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-all duration-500 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-[0_0_20px_oklch(0.28_0.08_335_/_0.4)]">
                   <Icon className="h-8 w-8" />
                 </div>
-                
+
                 <h3 className="font-display text-2xl font-semibold text-foreground relative z-10 transition-colors group-hover:text-primary">{title}</h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed relative z-10 flex-grow">{desc}</p>
-                
+
                 <div className="mt-8 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-widest text-primary opacity-0 -translate-x-4 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
                   Specialized Treatment <ArrowRight className="h-3 w-3" />
                 </div>
@@ -1228,23 +1284,23 @@ function Index() {
 
       {/* EXPERTISE LIST */}
       <section id="expertise" className="relative py-24 lg:py-36 overflow-hidden lighting-bg grain-overlay bg-[#FDFBFD]/80">
-        
+
         {/* Cinematic Backdrop Spotlights & Particles */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           {/* Volumetric Spotlights */}
-          <div 
+          <div
             className="absolute top-1/4 -left-1/4 size-[700px] rounded-full blur-[150px] opacity-[0.25]"
             style={{ background: "radial-gradient(circle, var(--color-primary-glow) 0%, transparent 70%)" }}
           />
-          <div 
+          <div
             className="absolute bottom-1/4 -right-1/4 size-[700px] rounded-full blur-[150px] opacity-[0.2]"
             style={{ background: "radial-gradient(circle, var(--color-accent) 0%, transparent 70%)" }}
           />
-          
+
           {/* Grid lines */}
           <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/15 to-transparent" />
           <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/10 to-transparent" />
-          
+
           {/* Floating light particles */}
           <motion.div
             animate={{
@@ -1260,16 +1316,16 @@ function Index() {
               x: [20, -20, 20],
             }}
             transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-1/4 right-1/3 size-72 rounded-full bg-blue-300/6 blur-[80px]"
+            className="absolute bottom-1/4 right-1/3 size-72 rounded-full bg-[#8E44AD]/6 blur-[80px]"
           />
         </div>
 
         <div className="relative mx-auto max-w-[1440px] px-6 lg:px-16 z-10">
           <div className="grid gap-16 lg:grid-cols-12 items-start">
-            
+
             {/* LEFT SIDE: Sticky Editorial Panel + Floating Badges */}
-            <motion.div 
-              {...fadeInUp} 
+            <motion.div
+              {...fadeInUp}
               className="lg:col-span-5 lg:sticky lg:top-28 space-y-12"
             >
               <div className="space-y-6">
@@ -1277,9 +1333,9 @@ function Index() {
                   <Sparkles className="w-4 h-4 text-[#8E44AD]" />
                   <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#8E44AD]">Our Expertise</span>
                 </div>
-                
+
                 <h2 className="font-display text-5xl font-bold leading-[1.08] md:text-6xl lg:text-[76px] tracking-tight text-[#0B132B]">
-                  Treatments<br/>
+                  Treatments<br />
                   <span className="relative inline-block mt-2">
                     <span className="relative z-10 bg-gradient-to-r from-[#4B1248] via-[#8E44AD] to-[#4B1248] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
                       tailored
@@ -1287,9 +1343,9 @@ function Index() {
                     {/* Glowing underline */}
                     <div className="absolute bottom-[12%] left-0 w-full h-[25%] bg-[#8E44AD]/20 blur-md -z-10 rounded-full" />
                   </span>
-                  <br/>to your smile.
+                  <br />to your smile.
                 </h2>
-                
+
                 <p className="text-lg md:text-xl leading-relaxed text-[#6B7280] font-medium max-w-[460px]">
                   We practice <span className="text-[#0B132B] font-semibold">"Slow Dentistry"</span> — dedicating extensive precision time and medical craftsmanship to every restoration for clean, lifelong success.
                 </p>
@@ -1298,7 +1354,7 @@ function Index() {
               {/* Luxury Floating Trust Badges */}
               <div className="grid gap-4 grid-cols-3 max-w-[480px]">
                 {[
-                  { value: "18+", label: "Yrs Exp", desc: "Chief MDS Surgeon" },
+                  { value: "19+", label: "Years Dr. Exp", desc: "Chief MDS Surgeon" },
                   { value: "10K+", label: "Smiles", desc: "Restored in Blr" },
                   { value: "99%", label: "Happy", desc: "Patient Rating" }
                 ].map((stat, i) => (
@@ -1319,8 +1375,8 @@ function Index() {
               <div>
                 <motion.a
                   href="/booking"
-                  whileHover={{ 
-                    scale: 1.03, 
+                  whileHover={{
+                    scale: 1.03,
                     boxShadow: "0 25px 50px -12px color-mix(in oklab, var(--primary) 35%, transparent)"
                   }}
                   whileTap={{ scale: 0.98 }}
@@ -1338,32 +1394,31 @@ function Index() {
 
             {/* RIGHT SIDE: Dynamic Bento Grid + Tabs + Secondary Pills */}
             <div className="lg:col-span-7 space-y-12">
-              
+
               {/* Luxury Tabs Selector (Apple Segmented Control Style) */}
               <div className="flex overflow-x-auto hide-scrollbar -mx-6 px-6 lg:mx-0 lg:px-0">
                 <div className="inline-flex bg-gray-100/80 p-1.5 rounded-full relative z-30 shadow-inner min-w-max">
                   {["All", "Aesthetic", "Restorative", "Preventative"].map((tab) => {
                     const label = tab === "Preventative" ? "Preventative & Special" : tab;
                     const isActive = activeTab === tab;
-                  return (
-                    <button
-                      key={tab}
-                      onClick={() => setActiveTab(tab)}
-                      className={`relative px-5 py-2.5 rounded-full text-[13px] font-semibold tracking-tight transition-all duration-300 cursor-pointer ${
-                        isActive ? "text-gray-900" : "text-gray-500 hover:text-gray-700"
-                      }`}
-                    >
-                      {isActive && (
-                        <motion.div
-                          layoutId="activeTabSegment"
-                          className="absolute inset-0 bg-white rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.06)] border border-gray-200/50 -z-10"
-                          transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                        />
-                      )}
-                      <span className="relative z-10">{label}</span>
-                    </button>
-                  );
-                })}
+                    return (
+                      <button
+                        key={tab}
+                        onClick={() => setActiveTab(tab)}
+                        className={`relative px-5 py-2.5 rounded-full text-[13px] font-semibold tracking-tight transition-all duration-300 cursor-pointer ${isActive ? "text-gray-900" : "text-gray-500 hover:text-gray-700"
+                          }`}
+                      >
+                        {isActive && (
+                          <motion.div
+                            layoutId="activeTabSegment"
+                            className="absolute inset-0 bg-white rounded-full shadow-[0_2px_8px_rgba(0,0,0,0.06)] border border-gray-200/50 -z-10"
+                            transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                          />
+                        )}
+                        <span className="relative z-10">{label}</span>
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
@@ -1382,9 +1437,9 @@ function Index() {
 
                 if (activeTab === "All") {
                   const curatedNames = [
-                    "Dental Implants", 
-                    "Invisible Aligners", 
-                    "Root Canal Treatment", 
+                    "Dental Implants",
+                    "Invisible Aligners",
+                    "Root Canal Treatment",
                     "Teeth Whitening"
                   ];
                   gridItems = filtered.filter(item => curatedNames.includes(item.name));
@@ -1415,13 +1470,11 @@ function Index() {
                               animate={{ opacity: 1, scale: 1, y: 0 }}
                               exit={{ opacity: 0, scale: 0.96, y: 20 }}
                               transition={{ duration: 0.4, ease: "easeOut" }}
-                              className={`group relative rounded-[2rem] p-6 md:p-8 flex flex-col justify-between overflow-hidden cursor-pointer transition-all duration-300 border backdrop-blur-xl ${
-                                isFeaturedLayout ? "md:col-span-2" : "md:col-span-1"
-                              } ${
-                                item.isFeatured
+                              className={`group relative rounded-[2rem] p-6 md:p-8 flex flex-col justify-between overflow-hidden cursor-pointer transition-all duration-300 border backdrop-blur-xl ${isFeaturedLayout ? "md:col-span-2" : "md:col-span-1"
+                                } ${item.isFeatured
                                   ? "bg-white/80 border-primary/20 shadow-[0_8px_30px_rgba(142,68,173,0.06)] hover:shadow-[0_12px_40px_rgba(142,68,173,0.12)]"
                                   : "bg-white/50 border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:bg-white/70"
-                              }`}
+                                }`}
                             >
                               {/* Background hover effect */}
                               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -1435,23 +1488,20 @@ function Index() {
                               )}
 
                               <div className={`relative z-10 flex ${isFeaturedLayout ? "flex-col md:flex-row md:items-center gap-6 md:gap-10" : "flex-col gap-6"}`}>
-                                <div className={`flex shrink-0 items-center justify-center rounded-2xl shadow-sm transition-transform duration-500 group-hover:scale-110 ${
-                                  item.isFeatured ? "h-16 w-16 bg-gradient-to-br from-[#4B1248] to-[#8E44AD] text-white" : "h-14 w-14 bg-primary/5 text-primary border border-primary/10"
-                                }`}>
+                                <div className={`flex shrink-0 items-center justify-center rounded-2xl shadow-sm transition-transform duration-500 group-hover:scale-110 ${item.isFeatured ? "h-16 w-16 bg-gradient-to-br from-[#4B1248] to-[#8E44AD] text-white" : "h-14 w-14 bg-primary/5 text-primary border border-primary/10"
+                                  }`}>
                                   <Icon className={item.isFeatured ? "h-7 w-7" : "h-6 w-6"} />
                                 </div>
 
                                 <div className={`space-y-3 flex-1 ${isFeaturedLayout ? "md:pr-24" : "pr-6"}`}>
                                   <div>
-                                    <h3 className={`font-display font-bold tracking-tight text-foreground transition-colors group-hover:text-primary ${
-                                      isFeaturedLayout ? "text-2xl md:text-3xl" : "text-xl"
-                                    }`}>
+                                    <h3 className={`font-display font-bold tracking-tight text-foreground transition-colors group-hover:text-primary ${isFeaturedLayout ? "text-2xl md:text-3xl" : "text-xl"
+                                      }`}>
                                       {item.name}
                                     </h3>
                                   </div>
-                                  <p className={`text-[#6B7280] font-medium leading-relaxed ${
-                                    isFeaturedLayout ? "text-[15px] md:max-w-[400px]" : "text-[13px]"
-                                  }`}>
+                                  <p className={`text-[#6B7280] font-medium leading-relaxed ${isFeaturedLayout ? "text-[15px] md:max-w-[400px]" : "text-[13px]"
+                                    }`}>
                                     {item.description}
                                   </p>
                                 </div>
@@ -1476,7 +1526,7 @@ function Index() {
                 );
               })()}
             </div>
-            
+
           </div>
         </div>
       </section>
@@ -1524,7 +1574,7 @@ function Index() {
               </div>
               <div className="flex gap-4">
                 <div className="hidden md:flex text-primary opacity-20">
-                  <svg className="w-16 h-16 fill-current" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                  <svg className="w-16 h-16 fill-current" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" /></svg>
                 </div>
                 <h2 className="font-display text-4xl font-semibold leading-[1.05] md:text-5xl lg:text-[56px] text-foreground max-w-2xl">
                   What patients say<br />
@@ -1542,88 +1592,101 @@ function Index() {
             {/* Left: Active testimonial card */}
             <div className="w-full">
               <AnimatePresence mode="wait">
-                <motion.div
-                  key={activeReview}
-                  initial={{ opacity: 0, y: 24, scale: 0.97 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -24, scale: 0.97 }}
-                  transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  className="relative overflow-hidden rounded-[2.5rem] border border-border/60 bg-card/70 backdrop-blur-2xl p-8 lg:p-12 shadow-[0_30px_80px_-20px_oklch(0.28_0.08_335_/_0.15)]"
-                >
-                  {/* Radial key-light top-left */}
-                  <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 100% 80% at 0% 0%, oklch(0.28 0.08 335 / 0.06) 0%, transparent 65%)" }} />
+                {(() => {
+                  const safeActiveReview = activeReview < reviews.length ? activeReview : 0;
+                  const currentReview = reviews[safeActiveReview];
 
-                  {/* Decorative huge quote mark */}
-                  <div className="absolute -top-4 -right-2 text-[10rem] font-serif leading-none text-primary/5 select-none pointer-events-none">"</div>
-
-                  {/* Progress bar — auto ticks every 3s */}
-                  <div className="absolute top-0 left-0 right-0 h-[4px] bg-border/30 rounded-t-[2.5rem] overflow-hidden">
+                  return (
                     <motion.div
-                      key={`bar-${activeReview}`}
-                      className="h-full bg-gradient-to-r from-primary to-primary-glow"
-                      initial={{ width: "0%" }}
-                      animate={{ width: "100%" }}
-                      transition={{ duration: 3, ease: "linear" }}
-                    />
-                  </div>
+                      key={safeActiveReview}
+                      initial={{ opacity: 0, y: 24, scale: 0.97 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -24, scale: 0.97 }}
+                      transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
+                      className="relative overflow-hidden rounded-[2.5rem] border border-border/60 bg-card/70 backdrop-blur-2xl p-8 lg:p-12 shadow-[0_30px_80px_-20px_oklch(0.28_0.08_335_/_0.15)]"
+                    >
+                      {/* Radial key-light top-left */}
+                      <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 100% 80% at 0% 0%, oklch(0.28 0.08 335 / 0.06) 0%, transparent 65%)" }} />
 
-                  {/* Stars + index counter */}
-                  <div className="flex items-center justify-between mb-8">
-                    <div className="flex text-yellow-400 gap-1">
-                      {[...Array(reviews[activeReview].rating)].map((_, i) => (
-                        <Star key={i} className="h-6 w-6 fill-current drop-shadow-[0_0_4px_rgba(250,204,21,0.5)]" />
-                      ))}
-                    </div>
-                    <span className="text-sm font-bold text-muted-foreground/50 tabular-nums">
-                      {String(activeReview + 1).padStart(2, "0")} / {String(reviews.length).padStart(2, "0")}
-                    </span>
-                  </div>
+                      {/* Decorative huge quote mark */}
+                      <div className="absolute -top-4 -right-2 text-[10rem] font-serif leading-none text-primary/5 select-none pointer-events-none">"</div>
 
-                  {/* Quote text */}
-                  <blockquote className="text-2xl font-medium leading-[1.6] text-foreground/80 italic">
-                    &ldquo;{reviews[activeReview].text}&rdquo;
-                  </blockquote>
-
-                  {/* Author */}
-                  <div className="mt-12 flex items-center justify-between pt-6 border-t border-border/40">
-                    <div className="flex items-center gap-4">
-                      <div className="relative">
-                        <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center text-primary-foreground font-bold text-2xl shadow-lg shadow-primary/20">
-                          {reviews[activeReview].name.charAt(0)}
-                        </div>
-                        <div className="absolute -bottom-1 -right-1 h-6 w-6 rounded-full bg-green-500 border-2 border-card flex items-center justify-center">
-                          <svg className="h-3 w-3 text-white fill-current" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none"/></svg>
-                        </div>
+                      {/* Progress bar — auto ticks every 8s */}
+                      <div className="absolute top-0 left-0 right-0 h-[4px] bg-border/30 rounded-t-[2.5rem] overflow-hidden">
+                        <motion.div
+                          key={`bar-${safeActiveReview}`}
+                          className="h-full bg-gradient-to-r from-primary to-primary-glow"
+                          initial={{ width: "0%" }}
+                          animate={{ width: "100%" }}
+                          transition={{ duration: 8, ease: "linear" }}
+                        />
                       </div>
-                      <div>
-                        <h4 className="font-bold text-lg text-foreground leading-tight">{reviews[activeReview].name}</h4>
-                        <p className="text-[12px] uppercase tracking-widest text-muted-foreground mt-1">{reviews[activeReview].role}</p>
+
+                      {/* Stars + index counter */}
+                      <div className="flex items-center justify-between mb-8">
+                        <div className="flex text-yellow-400 gap-1">
+                          {[...Array(currentReview.rating)].map((_, i) => (
+                            <Star key={i} className="h-6 w-6 fill-current drop-shadow-[0_0_4px_rgba(250,204,21,0.5)]" />
+                          ))}
+                        </div>
+                        <span className="text-sm font-bold text-muted-foreground/50 tabular-nums">
+                          {String(safeActiveReview + 1).padStart(2, "0")} / {String(reviews.length).padStart(2, "0")}
+                        </span>
                       </div>
-                    </div>
-                    <span className="text-xs font-semibold text-muted-foreground/60 bg-muted/40 rounded-full px-4 py-2">{reviews[activeReview].date}</span>
-                  </div>
-                </motion.div>
+
+                      {/* Quote text */}
+                      <blockquote className="text-2xl font-medium leading-[1.6] text-foreground/80 italic">
+                        &ldquo;{currentReview.text}&rdquo;
+                      </blockquote>
+
+                      {/* Author */}
+                      <div className="mt-12 flex items-center justify-between pt-6 border-t border-border/40">
+                        <div className="flex items-center gap-4">
+                          <div className="relative">
+                            <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center text-primary-foreground font-bold text-2xl shadow-lg shadow-primary/20 overflow-hidden">
+                              {currentReview.image ? (
+                                <img src={currentReview.image} alt={currentReview.name} className="w-full h-full object-cover" />
+                              ) : (
+                                currentReview.name.charAt(0)
+                              )}
+                            </div>
+                            <div className="absolute -bottom-1 -right-1 h-6 w-6 rounded-full bg-green-500 border-2 border-card flex items-center justify-center">
+                              <svg className="h-3 w-3 text-white fill-current" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none" /></svg>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-lg text-foreground leading-tight">{currentReview.name}</h4>
+                            <p className="text-[12px] uppercase tracking-widest text-muted-foreground mt-1">{currentReview.role}</p>
+                          </div>
+                        </div>
+                        <span className="text-xs font-semibold text-muted-foreground/60 bg-muted/40 rounded-full px-4 py-2">{currentReview.date}</span>
+                      </div>
+                    </motion.div>
+                  );
+                })()}
               </AnimatePresence>
 
               {/* Pagination dots */}
               <div className="mt-8 flex justify-center items-center gap-3">
-                {reviews.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setActiveReview(idx)}
-                    aria-label={`Review ${idx + 1}`}
-                    className={`rounded-full transition-all duration-500 ${
-                      idx === activeReview ? "w-10 h-2.5 bg-primary shadow-[0_0_10px_oklch(0.28_0.08_335_/_0.6)]" : "w-2.5 h-2.5 bg-muted-foreground/25 hover:bg-muted-foreground/50"
-                    }`}
-                  />
-                ))}
+                {reviews.map((_, idx) => {
+                  const safeActiveReview = activeReview < reviews.length ? activeReview : 0;
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveReview(idx)}
+                      aria-label={`Review ${idx + 1}`}
+                      className={`rounded-full transition-all duration-500 ${idx === safeActiveReview ? "w-10 h-2.5 bg-primary shadow-[0_0_10px_oklch(0.28_0.08_335_/_0.6)]" : "w-2.5 h-2.5 bg-muted-foreground/25 hover:bg-muted-foreground/50"
+                        }`}
+                    />
+                  );
+                })}
               </div>
             </div>
 
             {/* Right: Highlighted numbers / trust signals */}
             <div className="flex flex-col gap-5">
               {[
-                { value: "18+", label: "Years of expertise", sub: "Since 2008 in Nagarbhavi" },
+                { value: "19+", label: "Years of Dr. experience", sub: "Since 2008 in Nagarbhavi" },
                 { value: "10k+", label: "Smiles restored", sub: "Across Bengaluru" },
                 { value: "100%", label: "Painless procedures", sub: "With latest technology" },
               ].map((stat, i) => (
@@ -1696,34 +1759,55 @@ function Index() {
               <div className="absolute top-0 right-0 w-[200px] h-[200px] rounded-full blur-[80px] opacity-30" style={{ background: "radial-gradient(circle, rgba(142,68,173,0.15) 0%, transparent 70%)" }} />
               <div className="space-y-8">
                 {[
-                  { i: MapPin, l: "ADDRESS", v: "#19/12, 1st Floor, Near Deepak Complex, Outer Ring Road, Nagarbhavi 2nd Stage, Bengaluru, Karnataka 560072" },
-                  { i: Phone, l: "PHONE", v: "+91 99806 09894" },
-                  { i: Mail, l: "EMAIL", v: "info@ushadentalclinic.com" },
+                  { i: MapPin, l: "ADDRESS", v: "#19/12, 1st Floor, Near Deepak Complex, Outer Ring Road, Nagarbhavi 2nd Stage, Bengaluru, Karnataka 560072", href: "https://www.google.com/maps/place/USHA+DENTAL+CLINIC+AND+IMPLANT+CENTRE/@12.9673392,77.5024216,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae3da0c864a2db:0xc38d5f4949360e69!8m2!3d12.9673392!4d77.5024216!16s%2Fg%2F1tzvt_d2?entry=ttu" },
+                  { i: Phone, l: "PHONE", v: "+91 99806 09894", href: "tel:+919980609894" },
+                  { i: Mail, l: "EMAIL", v: "info@ushadentalclinic.com", href: "mailto:info@ushadentalclinic.com" },
                   { i: Clock, l: "CLINIC HOURS", v: "Mon – Sat: 10 AM – 8 PM · Sun: By Appt Only" },
-                ].map((item, i) => (
-                  <motion.div
-                    key={item.l}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1, duration: 0.5 }}
-                    className="flex items-start gap-5 group"
-                  >
-                    <motion.div
-                      whileHover={{ scale: 1.15, rotate: 5 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-white shadow-md mt-1 group-hover:shadow-lg group-hover:shadow-primary/30 transition-shadow"
-                    >
-                      <item.i className="h-5 w-5" />
-                    </motion.div>
+                ].map((item, i) => {
+                  const content = (
                     <div>
                       <div className="text-[11px] font-bold uppercase tracking-widest text-gray-400">{item.l}</div>
-                      <div className="mt-1.5 text-[15px] font-medium text-gray-800 leading-relaxed max-w-sm">{item.v}</div>
+                      <div className="mt-1.5 text-[15px] font-medium text-gray-800 leading-relaxed max-w-sm group-hover:text-primary transition-colors">{item.v}</div>
                     </div>
-                  </motion.div>
-                ))}
+                  );
+
+                  return (
+                    <motion.div
+                      key={item.l}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1, duration: 0.5 }}
+                      className="flex items-start gap-5 group"
+                    >
+                      {item.href ? (
+                        <a href={item.href} target={item.l !== "CLINIC HOURS" ? "_blank" : undefined} rel="noopener noreferrer" className="flex items-start gap-5 w-full">
+                          <motion.div
+                            whileHover={{ scale: 1.15, rotate: 5 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-white shadow-md mt-1 group-hover:shadow-lg group-hover:shadow-primary/30 transition-shadow"
+                          >
+                            <item.i className="h-5 w-5" />
+                          </motion.div>
+                          {content}
+                        </a>
+                      ) : (
+                        <>
+                          <motion.div
+                            whileHover={{ scale: 1.15, rotate: 5 }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary text-white shadow-md mt-1 group-hover:shadow-lg group-hover:shadow-primary/30 transition-shadow"
+                          >
+                            <item.i className="h-5 w-5" />
+                          </motion.div>
+                          {content}
+                        </>
+                      )}
+                    </motion.div>
+                  );
+                })}
               </div>
-              
+
               {/* Social Icons */}
               <div className="mt-12 flex gap-4">
                 {[Instagram, Facebook, Twitter].map((Icon, idx) => (
@@ -1749,7 +1833,7 @@ function Index() {
               className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-[500px] lg:h-auto min-h-[400px]"
             >
               <iframe
-                src="https://maps.google.com/maps?q=USHA+DENTAL+CLINIC+AND+IMPLANT+CENTRE,+Nagarbhavi,+Bengaluru&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.125712165842!2d77.50023291482202!3d12.967339190858696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3da0c864a2db%3A0xc38d5f4949360e69!2sUSHA%20DENTAL%20CLINIC%20AND%20IMPLANT%20CENTRE!5e0!3m2!1sen!2sin!4v1717329600000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -1780,15 +1864,15 @@ function Index() {
             transition={{ duration: 0.7, staggerChildren: 0.1 }}
             className="grid gap-12 lg:grid-cols-4 lg:gap-8 mb-16"
           >
-            
+
             {/* Col 1 */}
             <div className="lg:col-span-1">
               <motion.div
                 whileHover={{ scale: 1.03 }}
-                className="flex items-center gap-3"
+                className="flex items-center gap-4"
               >
-                <img src={logoImg} alt="Usha Dental Logo" className="h-10 object-contain" />
-                <span className="text-xl font-extrabold text-[#111] tracking-wide">
+                <img src={logoImg} alt="Usha Dental Logo" className="h-[62px] object-contain" />
+                <span className="text-[25px] font-extrabold text-[#111] tracking-wide">
                   Usha <span className="text-primary">Dental</span>
                 </span>
               </motion.div>
@@ -1847,7 +1931,7 @@ function Index() {
       {/* FLOATING ACTIONS */}
       <div className="fixed bottom-6 right-6 z-[100] flex flex-col items-end gap-4 pointer-events-none">
         {/* Book Now Button */}
-        <motion.a 
+        <motion.a
           href="/booking"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -1860,7 +1944,7 @@ function Index() {
         </motion.a>
 
         {/* WhatsApp Button */}
-        <motion.a 
+        <motion.a
           href="https://wa.me/919980609894"
           target="_blank"
           rel="noopener noreferrer"
@@ -1878,12 +1962,12 @@ function Index() {
             transition={{ duration: 2.5, repeat: Infinity, ease: "linear", repeatDelay: 0.5 }}
             className="absolute inset-0 w-[60%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none z-0"
           />
-          
+
           {/* Constant breathing glow inside */}
           <div className="absolute inset-0 rounded-full bg-[#25D366]/40 animate-pulse pointer-events-none mix-blend-screen" />
-          
+
           <MessageCircle className="relative z-10 h-8 w-8 fill-current drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)] group-hover:scale-110 transition-transform duration-300" />
-          
+
           {/* Outer Ping Ring */}
           <span className="absolute inset-0 -z-10 rounded-full border-2 border-[#25D366] animate-ping opacity-40 group-hover:opacity-100 transition-opacity"></span>
         </motion.a>
