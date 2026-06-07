@@ -488,7 +488,7 @@ function Index() {
             </motion.div>
             <div className="leading-tight flex items-baseline gap-2">
               <div className="font-display text-[18px] sm:text-[22px] font-extrabold group-hover/logo:text-[#8E44AD] transition-colors whitespace-nowrap">Usha Dental</div>
-              <div className="text-[12px] sm:text-[15px] font-black uppercase tracking-widest text-[#0B132B] whitespace-nowrap">Clinic & Implant Centre</div>
+              <div className="text-[18px] sm:text-[22px] font-extrabold uppercase tracking-widest text-[#0B132B] whitespace-nowrap">Clinic & Implant Centre</div>
             </div>
           </a>
 
