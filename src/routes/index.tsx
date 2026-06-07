@@ -457,122 +457,119 @@ function Index() {
     <div className="min-h-screen bg-background font-sans text-foreground selection:bg-primary/20 selection:text-primary">
       {/* NAV */}
       <motion.header
-        initial={{ y: -20, opacity: 0 }}
+        initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        className="sticky top-0 z-50 bg-white/60 backdrop-blur-2xl border-b border-white/50 shadow-[0_15px_40px_-10px_rgba(142,68,173,0.15)] group overflow-hidden"
-        style={{ transformStyle: "preserve-3d" }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        className="fixed top-4 inset-x-0 z-50 mx-auto px-4 w-full max-w-[1500px]"
       >
-        {/* Animated 3D Glass Sweeping Light */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-[1500ms] ease-in-out pointer-events-none" />
-
-        {/* Volumetric ambient glow inside the navbar */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[150px] bg-[#8E44AD]/15 blur-[60px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-
-        {/* Animated 3D edge light at the bottom */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 group-hover:w-full h-[2px] bg-gradient-to-r from-transparent via-[#8E44AD]/40 to-transparent transition-all duration-[800ms] ease-out pointer-events-none" />
-
-        <nav className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <a href="#top" className="flex items-center gap-3 group/logo relative">
-            <motion.div
-              whileHover={{ rotate: 10, scale: 1.1, z: 20 }}
-              transition={{ type: "spring", stiffness: 200 }}
-              className="relative"
-              style={{ transformStyle: "preserve-3d" }}
-            >
-              <div className="absolute inset-0 bg-[#8E44AD]/20 blur-md rounded-full scale-75 group-hover/logo:scale-110 transition-transform duration-500" />
-              <img
-                src={logoImg}
-                alt="Usha Dental Logo"
-                className="h-[68px] w-[68px] object-contain relative z-10 drop-shadow-md"
-              />
-            </motion.div>
-            <div className="leading-tight flex items-baseline gap-2">
-              <div className="font-display text-[18px] sm:text-[22px] font-extrabold group-hover/logo:text-[#8E44AD] transition-colors whitespace-nowrap">Usha Dental</div>
-              <div className="text-[18px] sm:text-[22px] font-extrabold uppercase tracking-widest text-[#0B132B] whitespace-nowrap">Clinic & Implant Centre</div>
-            </div>
-          </a>
-
-          {/* Desktop Nav Links */}
-          <div className="hidden items-center gap-10 text-sm font-medium md:flex">
-            {["About", "Meet the Doctor", "Clinic", "Services", "Reviews", "Contact"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                className="relative text-[#6B7280] transition-colors hover:text-[#0B132B] group/link"
+        <div className="relative w-full group">
+          {/* Intense Backlight Effect */}
+          <div className="absolute -inset-1.5 bg-gradient-to-r from-primary/30 via-[#6A2C70]/40 to-primary/30 rounded-full blur-[20px] opacity-70 group-hover:opacity-100 transition duration-1000 group-hover:duration-300 animate-pulse" />
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 via-white/40 to-primary/20 rounded-full blur-md opacity-60 group-hover:opacity-90 transition duration-500" />
+          
+          <nav className="relative w-full bg-white/85 backdrop-blur-2xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.06)] rounded-full px-5 py-3 lg:px-8 flex items-center justify-between">
+            {/* Logo Section */}
+            <a href="#top" className="flex items-center gap-3 xl:gap-4 flex-shrink-0 group/logo relative">
+              <motion.div
+                whileHover={{ rotate: 8, scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="relative"
               >
-                {item}
-                <motion.span
-                  className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-[2px] w-0 bg-[#8E44AD] rounded-full transition-all duration-300 group-hover/link:w-full shadow-[0_0_8px_rgba(142,68,173,0.5)]"
+                <div className="absolute inset-0 bg-[#8E44AD]/40 blur-md rounded-full scale-75 group-hover/logo:scale-125 transition-transform duration-500" />
+                <img
+                  src={logoImg}
+                  alt="Usha Dental Logo"
+                  className="h-[44px] w-[44px] lg:h-[50px] lg:w-[50px] xl:h-[58px] xl:w-[58px] object-contain relative z-10 drop-shadow-sm"
                 />
-              </a>
-            ))}
-            <motion.a
-              whileHover={{ scale: 1.05, y: -2, boxShadow: "0 10px 25px -5px rgba(142,68,173,0.4)" }}
-              whileTap={{ scale: 0.95 }}
-              href="/booking"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#4B1248] to-[#6A2C70] px-5 py-2.5 text-sm font-medium text-white shadow-[0_8px_16px_rgba(75,18,72,0.2)] transition-all duration-300 relative overflow-hidden"
-            >
-              {/* Button inner shine */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-700" />
-              <Phone className="h-4 w-4 relative z-10" />
-              <span className="relative z-10">Book Now</span>
-            </motion.a>
-          </div>
-
-          {/* Mobile Hamburger Button */}
-          <button
-            className="flex md:hidden flex-col justify-center items-center w-10 h-10 gap-1.5 z-50 relative"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle mobile menu"
-          >
-            <motion.span
-              animate={mobileMenuOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-              className="block w-6 h-[2px] bg-[#0B132B] rounded-full origin-center"
-            />
-            <motion.span
-              animate={mobileMenuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
-              className="block w-6 h-[2px] bg-[#0B132B] rounded-full"
-            />
-            <motion.span
-              animate={mobileMenuOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
-              className="block w-6 h-[2px] bg-[#0B132B] rounded-full origin-center"
-            />
-          </button>
-        </nav>
-
-        {/* Mobile Menu Drawer */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-2xl border-b border-gray-100 shadow-xl z-40 px-6 pb-6 pt-4"
-            >
-              <div className="flex flex-col gap-4">
-                {["About", "Meet the Doctor", "Clinic", "Services", "Reviews", "Contact"].map((item) => (
-                  <a
-                    key={item}
-                    href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="text-[16px] font-semibold text-[#0B132B] py-2.5 border-b border-gray-100 last:border-0 hover:text-[#8E44AD] transition-colors"
-                  >
-                    {item}
-                  </a>
-                ))}
-                <a
-                  href="/booking"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="mt-2 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#4B1248] to-[#6A2C70] px-6 py-3.5 text-base font-semibold text-white shadow-lg"
-                >
-                  <Calendar className="h-5 w-5" />
-                  Book Appointment
-                </a>
+              </motion.div>
+              <div className="leading-tight flex items-baseline gap-1.5 xl:gap-2">
+                <div className="font-display text-[17px] lg:text-[20px] xl:text-[24px] font-extrabold group-hover/logo:text-[#8E44AD] transition-colors whitespace-nowrap text-[#0B132B]">Usha Dental</div>
+                <div className="text-[13px] lg:text-[15px] xl:text-[18px] font-extrabold uppercase tracking-wide xl:tracking-widest text-[#0B132B] whitespace-nowrap">Clinic & Implant Centre</div>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            </a>
+
+            {/* Desktop Nav Links */}
+            <div className="hidden items-center gap-5 xl:gap-8 text-[13px] lg:text-[14px] xl:text-[15px] font-bold text-gray-500 lg:flex whitespace-nowrap ml-4">
+              {["About", "Meet the Doctor", "Clinic", "Services", "Reviews", "Contact"].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="relative transition-colors hover:text-[#0B132B] group/link py-2"
+                >
+                  {item}
+                  <motion.span
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2.5px] w-0 bg-[#8E44AD] rounded-full transition-all duration-300 group-hover/link:w-full shadow-[0_0_8px_rgba(142,68,173,0.6)]"
+                  />
+                </a>
+              ))}
+              <motion.a
+                whileHover={{ scale: 1.05, y: -2, boxShadow: "0 10px 25px -5px rgba(142,68,173,0.4)" }}
+                whileTap={{ scale: 0.95 }}
+                href="/booking"
+                className="ml-2 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-[#4B1248] to-[#6A2C70] px-5 py-2.5 xl:px-7 xl:py-3 text-[13px] xl:text-sm font-bold text-white shadow-lg transition-all duration-300 relative overflow-hidden group/btn"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 ease-out" />
+                <Phone className="h-4 w-4 relative z-10" />
+                <span className="relative z-10">Book Now</span>
+              </motion.a>
+            </div>
+
+            {/* Mobile Hamburger Button */}
+            <button
+              className="flex lg:hidden flex-col justify-center items-center w-10 h-10 gap-1.5 z-50 relative ml-auto"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              <motion.span
+                animate={mobileMenuOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
+                className="block w-6 h-[2.5px] bg-[#0B132B] rounded-full origin-center transition-all"
+              />
+              <motion.span
+                animate={mobileMenuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+                className="block w-6 h-[2.5px] bg-[#0B132B] rounded-full transition-all"
+              />
+              <motion.span
+                animate={mobileMenuOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
+                className="block w-6 h-[2.5px] bg-[#0B132B] rounded-full origin-center transition-all"
+              />
+            </button>
+          </nav>
+
+          {/* Mobile Menu Drawer */}
+          <AnimatePresence>
+            {mobileMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10, scale: 0.98 }}
+                animate={{ opacity: 1, y: 12, scale: 1 }}
+                exit={{ opacity: 0, y: -10, scale: 0.98 }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
+                className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-3xl border border-white/60 shadow-[0_20px_40px_rgba(0,0,0,0.15)] rounded-3xl z-40 px-6 py-6 overflow-hidden"
+              >
+                <div className="flex flex-col gap-2">
+                  {["About", "Meet the Doctor", "Clinic", "Services", "Reviews", "Contact"].map((item) => (
+                    <a
+                      key={item}
+                      href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="text-[17px] font-bold text-[#0B132B]/80 py-3 px-4 rounded-xl hover:bg-[#8E44AD]/10 hover:text-[#8E44AD] transition-all"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                  <div className="h-[1px] w-full bg-gray-100 my-2" />
+                  <a
+                    href="/booking"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#4B1248] to-[#8E44AD] px-6 py-4 text-base font-bold text-white shadow-lg mt-2"
+                  >
+                    <Calendar className="h-5 w-5" />
+                    Book Appointment
+                  </a>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </motion.header>
 
       <section id="top" className="relative overflow-hidden bg-[#F7F4FB] min-h-screen flex items-center pt-10 font-sans" style={{ perspective: "1200px" }}>
