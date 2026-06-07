@@ -482,9 +482,8 @@ function Index() {
                   className="h-[44px] w-[44px] lg:h-[50px] lg:w-[50px] xl:h-[58px] xl:w-[58px] object-contain relative z-10 drop-shadow-sm"
                 />
               </motion.div>
-              <div className="leading-tight flex items-center gap-1.5 xl:gap-2 group-hover/logo:text-[#8E44AD] transition-colors text-[#0B132B]">
-                <div className="font-display text-[16px] lg:text-[18px] xl:text-[22px] font-extrabold whitespace-nowrap">Usha Dental</div>
-                <div className="font-display text-[16px] lg:text-[18px] xl:text-[22px] font-extrabold uppercase whitespace-nowrap">Clinic & Implant Centre</div>
+              <div className="font-display text-[15px] lg:text-[17px] xl:text-[21px] font-extrabold uppercase tracking-wide group-hover/logo:text-[#8E44AD] transition-colors whitespace-nowrap text-[#0B132B] pt-0.5">
+                USHA DENTAL CLINIC & IMPLANT CENTRE
               </div>
             </a>
 
