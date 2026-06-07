@@ -1011,7 +1011,7 @@ function Index() {
                   },
                   {
                     t: "Modern Tech",
-                    s: "Latest oral diagnostics & 3D imaging tools.",
+                    s: "Advanced dental technology and modern diagnostic equipment.",
                     i: ModernTechIcon,
                     bg: "bg-[#0072B5]/6 border border-[#0072B5]/15 text-[#0072B5] shadow-[0_8px_20px_rgba(0,114,181,0.05)] hover:bg-[#0072B5]/10",
                     pingGlow: "bg-[#0072B5]/20"
